@@ -1,0 +1,30 @@
+{
+  "Registration" :
+  {
+      "username_textbox_id"   :  "username",
+      "password_textbox_id"   :  "password",
+      "firstname_textbox_id"  :  "firstname",
+      "lastname_textbox_id"   :  "lastname",
+      "phone_textbox_id"      :  "phone",
+      "register_button_xpath" :   "//input[@type='submit']",
+      "errormessage_xpath"    : "/html/body/section/div"
+  },
+  "MainView" :
+  {
+      "username_id"   :   "username",
+      "firstname_id"  :   "firstname",
+      "lastname_id"   :   "lastname",
+      "phone_id"      :   "phone"
+  },
+  "Home" :
+  {
+      "register_link_xpath"   :    "//a[text()='Register']",
+      "login_link_xpath"      :   "//a[text()='Log In']"
+  },
+  "Login" :
+  {
+      "login_button_xpath"       :   "//input[@type='submit']",
+      "errormessageheader_xpath" :   "/html/body/section/header/h1",
+      "errormessagetext_xpath"   :   "/html/body/section/p[1]"
+  }
+}

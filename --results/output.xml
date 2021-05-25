@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.2 (Python 3.9.5 on win32)" generated="20210525 21:50:47.628" rpa="false" schemaversion="2">
+<suite id="s1" name="UITestCases" source="C:\Users\nitin\PycharmProjects\TaskDemo\TestCases\UITestCases">
+<suite id="s1-s1" name="RegisterNewUser" source="C:\Users\nitin\PycharmProjects\TaskDemo\TestCases\UITestCases\RegisterNewUser.robot">
+<test id="s1-s1-t1" name="Register with valid details">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:50:47.877" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:50:47.878" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-1.log</msg>
+<status status="PASS" starttime="20210525 21:50:47.877" endtime="20210525 21:50:51.762"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:50:51.762" endtime="20210525 21:50:52.092"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:47.876" endtime="20210525 21:50:52.092"/>
+</kw>
+<kw name="User creation for testing purpose">
+<arg>user1</arg>
+<arg>password1</arg>
+<arg>first1</arg>
+<arg>last1</arg>
+<arg>2323434</arg>
+<doc>This testcase will create a default user for testing purpose</doc>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:52.097" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:50:52.096" endtime="20210525 21:50:52.098"/>
+</kw>
+<msg timestamp="20210525 21:50:52.098" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:50:52.095" endtime="20210525 21:50:52.098"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:52.099" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:50:52.098" endtime="20210525 21:50:52.228"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:52.095" endtime="20210525 21:50:52.228"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${datadriven_username}</arg>
+<arg>${datadriven_password}</arg>
+<arg>${datadriven_firstname}</arg>
+<arg>${datadriven_lastname}</arg>
+<arg>${datadriven_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:52.232" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:50:52.231" endtime="20210525 21:50:52.232"/>
+</kw>
+<msg timestamp="20210525 21:50:52.232" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:50:52.230" endtime="20210525 21:50:52.232"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:52.234" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:50:52.233" endtime="20210525 21:50:52.234"/>
+</kw>
+<msg timestamp="20210525 21:50:52.235" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:50:52.232" endtime="20210525 21:50:52.235"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:52.236" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:50:52.236" endtime="20210525 21:50:52.237"/>
+</kw>
+<msg timestamp="20210525 21:50:52.237" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:50:52.235" endtime="20210525 21:50:52.237"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:52.239" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:50:52.238" endtime="20210525 21:50:52.239"/>
+</kw>
+<msg timestamp="20210525 21:50:52.239" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:50:52.237" endtime="20210525 21:50:52.239"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:52.241" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:50:52.240" endtime="20210525 21:50:52.241"/>
+</kw>
+<msg timestamp="20210525 21:50:52.241" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:50:52.239" endtime="20210525 21:50:52.242"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:52.243" level="INFO">Typing text 'user1' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:50:52.242" endtime="20210525 21:50:52.324"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:52.325" level="INFO">Typing text 'password1' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:50:52.324" endtime="20210525 21:50:52.365"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:52.365" level="INFO">Typing text 'first1' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:50:52.365" endtime="20210525 21:50:52.428"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:52.430" level="INFO">Typing text 'last1' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:50:52.429" endtime="20210525 21:50:52.479"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:52.480" level="INFO">Typing text '2323434' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:50:52.479" endtime="20210525 21:50:52.528"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:52.228" endtime="20210525 21:50:52.528"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:52.531" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:50:52.530" endtime="20210525 21:50:52.531"/>
+</kw>
+<msg timestamp="20210525 21:50:52.531" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:50:52.529" endtime="20210525 21:50:52.531"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:52.532" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:50:52.531" endtime="20210525 21:50:52.682"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:52.529" endtime="20210525 21:50:52.682"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:52.094" endtime="20210525 21:50:52.682"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:50:52.689" endtime="20210525 21:50:53.876"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:52.689" endtime="20210525 21:50:53.876"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:47.876" endtime="20210525 21:50:53.877"/>
+</test>
+<test id="s1-s1-t2" name="Blank fields">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:50:53.879" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:50:53.880" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-2.log</msg>
+<status status="PASS" starttime="20210525 21:50:53.879" endtime="20210525 21:50:58.270"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:50:58.271" endtime="20210525 21:50:58.548"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:53.878" endtime="20210525 21:50:58.549"/>
+</kw>
+<kw name="User creation for testing purpose">
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<doc>This testcase will create a default user for testing purpose</doc>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:58.557" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:50:58.557" endtime="20210525 21:50:58.558"/>
+</kw>
+<msg timestamp="20210525 21:50:58.558" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:50:58.556" endtime="20210525 21:50:58.558"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:58.558" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:50:58.558" endtime="20210525 21:50:58.674"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:58.556" endtime="20210525 21:50:58.674"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${datadriven_username}</arg>
+<arg>${datadriven_password}</arg>
+<arg>${datadriven_firstname}</arg>
+<arg>${datadriven_lastname}</arg>
+<arg>${datadriven_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:58.677" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:50:58.677" endtime="20210525 21:50:58.677"/>
+</kw>
+<msg timestamp="20210525 21:50:58.678" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:50:58.676" endtime="20210525 21:50:58.678"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:58.679" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:50:58.678" endtime="20210525 21:50:58.679"/>
+</kw>
+<msg timestamp="20210525 21:50:58.679" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:50:58.678" endtime="20210525 21:50:58.679"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:58.681" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:50:58.680" endtime="20210525 21:50:58.681"/>
+</kw>
+<msg timestamp="20210525 21:50:58.682" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:50:58.679" endtime="20210525 21:50:58.682"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:58.686" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:50:58.684" endtime="20210525 21:50:58.686"/>
+</kw>
+<msg timestamp="20210525 21:50:58.686" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:50:58.682" endtime="20210525 21:50:58.686"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:58.689" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:50:58.687" endtime="20210525 21:50:58.689"/>
+</kw>
+<msg timestamp="20210525 21:50:58.690" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:50:58.687" endtime="20210525 21:50:58.690"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:58.692" level="INFO">Typing text '' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:50:58.690" endtime="20210525 21:50:58.727"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:58.728" level="INFO">Typing text '' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:50:58.727" endtime="20210525 21:50:58.760"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:58.761" level="INFO">Typing text '' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:50:58.760" endtime="20210525 21:50:58.793"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:58.794" level="INFO">Typing text '' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:50:58.793" endtime="20210525 21:50:58.819"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:58.821" level="INFO">Typing text '' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:50:58.820" endtime="20210525 21:50:58.847"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:58.674" endtime="20210525 21:50:58.847"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:50:58.852" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:50:58.849" endtime="20210525 21:50:58.852"/>
+</kw>
+<msg timestamp="20210525 21:50:58.852" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:50:58.848" endtime="20210525 21:50:58.852"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:50:58.853" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:50:58.853" endtime="20210525 21:50:59.094"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:58.848" endtime="20210525 21:50:59.094"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:58.550" endtime="20210525 21:50:59.094"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:50:59.095" endtime="20210525 21:50:59.915"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:59.095" endtime="20210525 21:50:59.915"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:53.878" endtime="20210525 21:50:59.916"/>
+</test>
+<test id="s1-s1-t3" name="Register with alphabets">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:50:59.917" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:50:59.918" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-3.log</msg>
+<status status="PASS" starttime="20210525 21:50:59.917" endtime="20210525 21:51:04.267"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:04.268" endtime="20210525 21:51:04.549"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:59.917" endtime="20210525 21:51:04.549"/>
+</kw>
+<kw name="User creation for testing purpose">
+<arg>test</arg>
+<arg>desff</arg>
+<arg>sdfdfg</arg>
+<arg>dgfhghf</arg>
+<arg>sfdfd</arg>
+<doc>This testcase will create a default user for testing purpose</doc>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:04.551" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:04.550" endtime="20210525 21:51:04.551"/>
+</kw>
+<msg timestamp="20210525 21:51:04.551" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:04.550" endtime="20210525 21:51:04.551"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:04.551" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:51:04.551" endtime="20210525 21:51:04.640"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:04.550" endtime="20210525 21:51:04.640"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${datadriven_username}</arg>
+<arg>${datadriven_password}</arg>
+<arg>${datadriven_firstname}</arg>
+<arg>${datadriven_lastname}</arg>
+<arg>${datadriven_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:04.642" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:04.642" endtime="20210525 21:51:04.642"/>
+</kw>
+<msg timestamp="20210525 21:51:04.642" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:51:04.641" endtime="20210525 21:51:04.642"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:04.643" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:51:04.643" endtime="20210525 21:51:04.643"/>
+</kw>
+<msg timestamp="20210525 21:51:04.643" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:51:04.642" endtime="20210525 21:51:04.644"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:04.646" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:04.645" endtime="20210525 21:51:04.646"/>
+</kw>
+<msg timestamp="20210525 21:51:04.648" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:04.644" endtime="20210525 21:51:04.648"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:04.650" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:04.649" endtime="20210525 21:51:04.651"/>
+</kw>
+<msg timestamp="20210525 21:51:04.651" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:04.648" endtime="20210525 21:51:04.651"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:04.653" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:04.652" endtime="20210525 21:51:04.653"/>
+</kw>
+<msg timestamp="20210525 21:51:04.654" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:04.651" endtime="20210525 21:51:04.654"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:04.655" level="INFO">Typing text 'test' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:04.654" endtime="20210525 21:51:04.703"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:04.704" level="INFO">Typing text 'desff' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:04.703" endtime="20210525 21:51:04.735"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:04.736" level="INFO">Typing text 'sdfdfg' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:51:04.735" endtime="20210525 21:51:04.769"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:04.771" level="INFO">Typing text 'dgfhghf' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:51:04.770" endtime="20210525 21:51:04.803"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:04.804" level="INFO">Typing text 'sfdfd' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:51:04.803" endtime="20210525 21:51:04.834"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:04.640" endtime="20210525 21:51:04.834"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:04.836" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:04.836" endtime="20210525 21:51:04.837"/>
+</kw>
+<msg timestamp="20210525 21:51:04.837" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:04.835" endtime="20210525 21:51:04.837"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:04.838" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:04.837" endtime="20210525 21:51:04.906"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:04.834" endtime="20210525 21:51:04.906"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:04.549" endtime="20210525 21:51:04.907"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:04.911" endtime="20210525 21:51:05.858"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:04.910" endtime="20210525 21:51:05.858"/>
+</kw>
+<status status="PASS" starttime="20210525 21:50:59.916" endtime="20210525 21:51:05.858"/>
+</test>
+<test id="s1-s1-t4" name="Register with numbers">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:05.860" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:05.861" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-4.log</msg>
+<status status="PASS" starttime="20210525 21:51:05.860" endtime="20210525 21:51:10.308"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:10.308" endtime="20210525 21:51:10.619"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:05.860" endtime="20210525 21:51:10.620"/>
+</kw>
+<kw name="User creation for testing purpose">
+<arg>23344</arg>
+<arg>4545</arg>
+<arg>35454</arg>
+<arg>454554</arg>
+<arg>35346</arg>
+<doc>This testcase will create a default user for testing purpose</doc>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:10.630" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:10.629" endtime="20210525 21:51:10.630"/>
+</kw>
+<msg timestamp="20210525 21:51:10.632" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:10.628" endtime="20210525 21:51:10.633"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:10.634" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:51:10.633" endtime="20210525 21:51:10.750"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:10.626" endtime="20210525 21:51:10.750"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${datadriven_username}</arg>
+<arg>${datadriven_password}</arg>
+<arg>${datadriven_firstname}</arg>
+<arg>${datadriven_lastname}</arg>
+<arg>${datadriven_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:10.753" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:10.752" endtime="20210525 21:51:10.753"/>
+</kw>
+<msg timestamp="20210525 21:51:10.753" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:51:10.751" endtime="20210525 21:51:10.753"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:10.755" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:51:10.754" endtime="20210525 21:51:10.755"/>
+</kw>
+<msg timestamp="20210525 21:51:10.755" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:51:10.753" endtime="20210525 21:51:10.755"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:10.757" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:10.756" endtime="20210525 21:51:10.757"/>
+</kw>
+<msg timestamp="20210525 21:51:10.757" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:10.755" endtime="20210525 21:51:10.757"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:10.759" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:10.759" endtime="20210525 21:51:10.760"/>
+</kw>
+<msg timestamp="20210525 21:51:10.760" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:10.758" endtime="20210525 21:51:10.760"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:10.762" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:10.761" endtime="20210525 21:51:10.762"/>
+</kw>
+<msg timestamp="20210525 21:51:10.762" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:10.760" endtime="20210525 21:51:10.762"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:10.763" level="INFO">Typing text '23344' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:10.763" endtime="20210525 21:51:10.835"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:10.836" level="INFO">Typing text '4545' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:10.836" endtime="20210525 21:51:10.887"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:10.887" level="INFO">Typing text '35454' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:51:10.887" endtime="20210525 21:51:10.946"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:10.947" level="INFO">Typing text '454554' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:51:10.947" endtime="20210525 21:51:11.092"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:11.092" level="INFO">Typing text '35346' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:51:11.092" endtime="20210525 21:51:11.152"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:10.750" endtime="20210525 21:51:11.152"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:11.155" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:11.154" endtime="20210525 21:51:11.155"/>
+</kw>
+<msg timestamp="20210525 21:51:11.156" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:11.153" endtime="20210525 21:51:11.156"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:11.157" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:11.156" endtime="20210525 21:51:11.235"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:11.153" endtime="20210525 21:51:11.235"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:10.625" endtime="20210525 21:51:11.235"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:11.241" endtime="20210525 21:51:12.287"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:11.240" endtime="20210525 21:51:12.287"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:05.859" endtime="20210525 21:51:12.288"/>
+</test>
+<test id="s1-s1-t5" name="Register with specialcharacters">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:12.290" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:12.291" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-5.log</msg>
+<status status="PASS" starttime="20210525 21:51:12.290" endtime="20210525 21:51:16.756"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:16.756" endtime="20210525 21:51:17.041"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:12.289" endtime="20210525 21:51:17.041"/>
+</kw>
+<kw name="User creation for testing purpose">
+<arg>$%^$£"</arg>
+<arg>*(&amp;^^</arg>
+<arg>!"£$%&amp;</arg>
+<arg>£$$$%</arg>
+<arg>%^$£</arg>
+<doc>This testcase will create a default user for testing purpose</doc>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:17.043" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:17.042" endtime="20210525 21:51:17.043"/>
+</kw>
+<msg timestamp="20210525 21:51:17.043" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:17.042" endtime="20210525 21:51:17.043"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:17.043" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:51:17.043" endtime="20210525 21:51:17.138"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:17.042" endtime="20210525 21:51:17.138"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${datadriven_username}</arg>
+<arg>${datadriven_password}</arg>
+<arg>${datadriven_firstname}</arg>
+<arg>${datadriven_lastname}</arg>
+<arg>${datadriven_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:17.143" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:17.142" endtime="20210525 21:51:17.143"/>
+</kw>
+<msg timestamp="20210525 21:51:17.144" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:51:17.140" endtime="20210525 21:51:17.144"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:17.146" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:51:17.145" endtime="20210525 21:51:17.146"/>
+</kw>
+<msg timestamp="20210525 21:51:17.147" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:51:17.144" endtime="20210525 21:51:17.147"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:17.149" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:17.148" endtime="20210525 21:51:17.149"/>
+</kw>
+<msg timestamp="20210525 21:51:17.149" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:17.147" endtime="20210525 21:51:17.149"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:17.151" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:17.150" endtime="20210525 21:51:17.151"/>
+</kw>
+<msg timestamp="20210525 21:51:17.151" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:17.150" endtime="20210525 21:51:17.151"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:17.153" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:17.152" endtime="20210525 21:51:17.153"/>
+</kw>
+<msg timestamp="20210525 21:51:17.153" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:17.152" endtime="20210525 21:51:17.153"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:17.154" level="INFO">Typing text '$%^$£"' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:17.153" endtime="20210525 21:51:17.202"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:17.203" level="INFO">Typing text '*(&amp;^^' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:17.202" endtime="20210525 21:51:17.234"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:17.235" level="INFO">Typing text '!"£$%&amp;' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:51:17.234" endtime="20210525 21:51:17.271"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:17.272" level="INFO">Typing text '£$$$%' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:51:17.271" endtime="20210525 21:51:17.311"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:17.313" level="INFO">Typing text '%^$£' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:51:17.311" endtime="20210525 21:51:17.347"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:17.138" endtime="20210525 21:51:17.347"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:17.350" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:17.348" endtime="20210525 21:51:17.350"/>
+</kw>
+<msg timestamp="20210525 21:51:17.350" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:17.348" endtime="20210525 21:51:17.350"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:17.351" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:17.351" endtime="20210525 21:51:17.421"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:17.347" endtime="20210525 21:51:17.421"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:17.041" endtime="20210525 21:51:17.421"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:17.436" endtime="20210525 21:51:18.309"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:17.435" endtime="20210525 21:51:18.310"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:12.289" endtime="20210525 21:51:18.310"/>
+</test>
+<test id="s1-s1-t6" name="Register with no details">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:18.312" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:18.313" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-6.log</msg>
+<status status="PASS" starttime="20210525 21:51:18.312" endtime="20210525 21:51:22.693"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:22.694" endtime="20210525 21:51:22.973"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:18.312" endtime="20210525 21:51:22.973"/>
+</kw>
+<kw name="User creation for testing purpose">
+<arg>resd</arg>
+<arg>ty56</arg>
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<arg>${Empty}</arg>
+<doc>This testcase will create a default user for testing purpose</doc>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:22.982" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:22.981" endtime="20210525 21:51:22.982"/>
+</kw>
+<msg timestamp="20210525 21:51:22.982" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:22.981" endtime="20210525 21:51:22.982"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:22.983" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:51:22.983" endtime="20210525 21:51:23.094"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:22.980" endtime="20210525 21:51:23.094"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${datadriven_username}</arg>
+<arg>${datadriven_password}</arg>
+<arg>${datadriven_firstname}</arg>
+<arg>${datadriven_lastname}</arg>
+<arg>${datadriven_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:23.097" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:23.096" endtime="20210525 21:51:23.097"/>
+</kw>
+<msg timestamp="20210525 21:51:23.098" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:51:23.096" endtime="20210525 21:51:23.098"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:23.099" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:51:23.099" endtime="20210525 21:51:23.099"/>
+</kw>
+<msg timestamp="20210525 21:51:23.100" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:51:23.098" endtime="20210525 21:51:23.100"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:23.102" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:23.101" endtime="20210525 21:51:23.103"/>
+</kw>
+<msg timestamp="20210525 21:51:23.104" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:23.100" endtime="20210525 21:51:23.104"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:23.106" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:23.104" endtime="20210525 21:51:23.106"/>
+</kw>
+<msg timestamp="20210525 21:51:23.106" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:23.104" endtime="20210525 21:51:23.107"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:23.109" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:23.107" endtime="20210525 21:51:23.109"/>
+</kw>
+<msg timestamp="20210525 21:51:23.110" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:23.107" endtime="20210525 21:51:23.110"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:23.111" level="INFO">Typing text 'resd' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:23.110" endtime="20210525 21:51:23.161"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:23.162" level="INFO">Typing text 'ty56' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:23.161" endtime="20210525 21:51:23.197"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:23.198" level="INFO">Typing text '' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:51:23.197" endtime="20210525 21:51:23.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:23.245" level="INFO">Typing text '' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:51:23.245" endtime="20210525 21:51:23.273"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:23.275" level="INFO">Typing text '' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:51:23.274" endtime="20210525 21:51:23.311"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:23.095" endtime="20210525 21:51:23.311"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:23.313" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:23.313" endtime="20210525 21:51:23.313"/>
+</kw>
+<msg timestamp="20210525 21:51:23.314" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:23.312" endtime="20210525 21:51:23.314"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:23.314" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:23.314" endtime="20210525 21:51:23.563"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:23.311" endtime="20210525 21:51:23.563"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:22.976" endtime="20210525 21:51:23.563"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:23.564" endtime="20210525 21:51:24.588"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:23.564" endtime="20210525 21:51:24.588"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:18.311" endtime="20210525 21:51:24.589"/>
+</test>
+<status status="PASS" starttime="20210525 21:50:47.662" endtime="20210525 21:51:24.590"/>
+</suite>
+<suite id="s1-s2" name="RegisterVerifyNewUser" source="C:\Users\nitin\PycharmProjects\TaskDemo\TestCases\UITestCases\RegisterVerifyNewUser.robot">
+<test id="s1-s2-t1" name="Default User creation for testing purpose">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:24.611" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:24.611" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-7.log</msg>
+<status status="PASS" starttime="20210525 21:51:24.610" endtime="20210525 21:51:29.020"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:29.020" endtime="20210525 21:51:29.307"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:24.610" endtime="20210525 21:51:29.307"/>
+</kw>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:29.314" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:29.313" endtime="20210525 21:51:29.314"/>
+</kw>
+<msg timestamp="20210525 21:51:29.314" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:29.312" endtime="20210525 21:51:29.314"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:29.316" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:51:29.315" endtime="20210525 21:51:29.431"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:29.311" endtime="20210525 21:51:29.432"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${default_username}</arg>
+<arg>${default_password}</arg>
+<arg>${default_firstname}</arg>
+<arg>${default_lastname}</arg>
+<arg>${default_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:29.439" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:29.438" endtime="20210525 21:51:29.439"/>
+</kw>
+<msg timestamp="20210525 21:51:29.439" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:51:29.437" endtime="20210525 21:51:29.440"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:29.441" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:51:29.440" endtime="20210525 21:51:29.441"/>
+</kw>
+<msg timestamp="20210525 21:51:29.442" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:51:29.440" endtime="20210525 21:51:29.442"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:29.444" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:29.443" endtime="20210525 21:51:29.444"/>
+</kw>
+<msg timestamp="20210525 21:51:29.444" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:29.442" endtime="20210525 21:51:29.444"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:29.446" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:29.445" endtime="20210525 21:51:29.447"/>
+</kw>
+<msg timestamp="20210525 21:51:29.447" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:29.444" endtime="20210525 21:51:29.447"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:29.449" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:29.448" endtime="20210525 21:51:29.449"/>
+</kw>
+<msg timestamp="20210525 21:51:29.449" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:29.447" endtime="20210525 21:51:29.449"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:29.450" level="INFO">Typing text 'firstuser9' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:29.449" endtime="20210525 21:51:29.513"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:29.516" level="INFO">Typing text 'password' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:29.514" endtime="20210525 21:51:29.560"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:29.561" level="INFO">Typing text 'first' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:51:29.560" endtime="20210525 21:51:29.594"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:29.595" level="INFO">Typing text 'user' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:51:29.594" endtime="20210525 21:51:29.642"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:29.643" level="INFO">Typing text '876543219' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:51:29.642" endtime="20210525 21:51:29.759"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:29.436" endtime="20210525 21:51:29.759"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:29.768" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:29.768" endtime="20210525 21:51:29.768"/>
+</kw>
+<msg timestamp="20210525 21:51:29.769" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:29.767" endtime="20210525 21:51:29.769"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:29.770" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:29.769" endtime="20210525 21:51:29.856"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:29.766" endtime="20210525 21:51:29.857"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:29.858" endtime="20210525 21:51:30.828"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:29.858" endtime="20210525 21:51:30.829"/>
+</kw>
+<doc>This testcase will create a default user for testing purpose</doc>
+<status status="PASS" starttime="20210525 21:51:24.609" endtime="20210525 21:51:30.829"/>
+</test>
+<test id="s1-s2-t2" name="New User Registration with valid details">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:30.831" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:30.832" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-8.log</msg>
+<status status="PASS" starttime="20210525 21:51:30.831" endtime="20210525 21:51:35.335"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:35.335" endtime="20210525 21:51:35.614"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:30.831" endtime="20210525 21:51:35.614"/>
+</kw>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:35.622" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:35.614" endtime="20210525 21:51:35.622"/>
+</kw>
+<msg timestamp="20210525 21:51:35.622" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:35.614" endtime="20210525 21:51:35.622"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:35.622" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:51:35.622" endtime="20210525 21:51:35.756"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:35.614" endtime="20210525 21:51:35.756"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${new_username}</arg>
+<arg>${new_password}</arg>
+<arg>${new_firstname}</arg>
+<arg>${new_lastname}</arg>
+<arg>${new_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:35.766" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:35.766" endtime="20210525 21:51:35.766"/>
+</kw>
+<msg timestamp="20210525 21:51:35.766" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:51:35.766" endtime="20210525 21:51:35.766"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:35.774" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:51:35.766" endtime="20210525 21:51:35.774"/>
+</kw>
+<msg timestamp="20210525 21:51:35.774" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:51:35.766" endtime="20210525 21:51:35.774"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:35.776" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:35.774" endtime="20210525 21:51:35.776"/>
+</kw>
+<msg timestamp="20210525 21:51:35.776" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:35.774" endtime="20210525 21:51:35.776"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:35.776" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:35.776" endtime="20210525 21:51:35.776"/>
+</kw>
+<msg timestamp="20210525 21:51:35.776" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:35.776" endtime="20210525 21:51:35.776"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:35.776" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:35.776" endtime="20210525 21:51:35.776"/>
+</kw>
+<msg timestamp="20210525 21:51:35.776" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:35.776" endtime="20210525 21:51:35.776"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:35.776" level="INFO">Typing text 'unmAYRXhyU' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:35.776" endtime="20210525 21:51:35.847"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:35.847" level="INFO">Typing text 'test1234' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:35.847" endtime="20210525 21:51:35.887"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:35.887" level="INFO">Typing text 'test' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:51:35.887" endtime="20210525 21:51:35.926"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:35.928" level="INFO">Typing text 'tdf' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:51:35.928" endtime="20210525 21:51:35.968"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:35.968" level="INFO">Typing text '764443322' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:51:35.968" endtime="20210525 21:51:36.009"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:35.766" endtime="20210525 21:51:36.009"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:36.019" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:36.017" endtime="20210525 21:51:36.019"/>
+</kw>
+<msg timestamp="20210525 21:51:36.019" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:36.017" endtime="20210525 21:51:36.019"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:36.019" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:36.019" endtime="20210525 21:51:36.189"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:36.017" endtime="20210525 21:51:36.189"/>
+</kw>
+<kw name="Login Page Should be Open" library="LoginPage">
+<doc>This keyword is check if login page is open</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210525 21:51:36.202" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20210525 21:51:36.191" endtime="20210525 21:51:36.202"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:36.191" endtime="20210525 21:51:36.202"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:36.202" endtime="20210525 21:51:37.456"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:36.202" endtime="20210525 21:51:37.456"/>
+</kw>
+<doc>This testcase will register a new user successfully</doc>
+<status status="PASS" starttime="20210525 21:51:30.830" endtime="20210525 21:51:37.456"/>
+</test>
+<test id="s1-s2-t3" name="Review the Registered new user details">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:37.456" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:37.456" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-9.log</msg>
+<status status="PASS" starttime="20210525 21:51:37.456" endtime="20210525 21:51:42.059"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:42.059" endtime="20210525 21:51:42.350"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:37.456" endtime="20210525 21:51:42.352"/>
+</kw>
+<kw name="Click on LoginLink" library="Common">
+<doc>This keyword is used to click login link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lLoginlink}</var>
+<arg>Home.login_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:42.352" level="INFO">${result} = //a[text()='Log In']</msg>
+<status status="PASS" starttime="20210525 21:51:42.352" endtime="20210525 21:51:42.352"/>
+</kw>
+<msg timestamp="20210525 21:51:42.352" level="INFO">${lLoginlink} = //a[text()='Log In']</msg>
+<status status="PASS" starttime="20210525 21:51:42.352" endtime="20210525 21:51:42.352"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lLoginlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.352" level="INFO">Clicking link 'xpath://a[text()='Log In']'.</msg>
+<status status="PASS" starttime="20210525 21:51:42.352" endtime="20210525 21:51:42.463"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:42.352" endtime="20210525 21:51:42.463"/>
+</kw>
+<kw name="Login Page Should be Open" library="LoginPage">
+<doc>This keyword is check if login page is open</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210525 21:51:42.473" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20210525 21:51:42.473" endtime="20210525 21:51:42.473"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:42.473" endtime="20210525 21:51:42.473"/>
+</kw>
+<kw name="Fill values in login page" library="LoginPage">
+<arg>${new_username}</arg>
+<arg>${new_password}</arg>
+<doc>This keyword is used to fill all the field values in login page</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.484" level="INFO">Typing text 'unmAYRXhyU' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:42.484" endtime="20210525 21:51:42.554"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.554" level="INFO">Typing text 'test1234' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:42.554" endtime="20210525 21:51:42.605"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:42.484" endtime="20210525 21:51:42.605"/>
+</kw>
+<kw name="Click on LoginButton" library="Common">
+<doc>This keyword is used to click register link in login page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lLoginbutton}</var>
+<arg>Login.login_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:42.615" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:42.615" endtime="20210525 21:51:42.615"/>
+</kw>
+<msg timestamp="20210525 21:51:42.615" level="INFO">${lLoginbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:42.615" endtime="20210525 21:51:42.615"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lLoginbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.615" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:42.615" endtime="20210525 21:51:42.838"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:42.613" endtime="20210525 21:51:42.838"/>
+</kw>
+<kw name="Verify the User Information" library="MainViewPage">
+<doc>This keyword is used to verify the user details on main view page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lMainview_Username}</var>
+<arg>MainView.username_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:42.838" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:42.838" endtime="20210525 21:51:42.838"/>
+</kw>
+<msg timestamp="20210525 21:51:42.846" level="INFO">${lMainview_Username} = username</msg>
+<status status="PASS" starttime="20210525 21:51:42.838" endtime="20210525 21:51:42.846"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lMainview_firstname}</var>
+<arg>MainView.firstname_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:42.848" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:42.846" endtime="20210525 21:51:42.848"/>
+</kw>
+<msg timestamp="20210525 21:51:42.848" level="INFO">${lMainview_firstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:42.846" endtime="20210525 21:51:42.848"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lMainview_lastname}</var>
+<arg>MainView.lastname_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:42.848" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:42.848" endtime="20210525 21:51:42.848"/>
+</kw>
+<msg timestamp="20210525 21:51:42.848" level="INFO">${lMainview_lastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:42.848" endtime="20210525 21:51:42.848"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lMainview_phone}</var>
+<arg>MainView.phone_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:42.848" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:42.848" endtime="20210525 21:51:42.848"/>
+</kw>
+<msg timestamp="20210525 21:51:42.848" level="INFO">${lMainview_phone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:42.848" endtime="20210525 21:51:42.848"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Mainview_username}</var>
+<arg>id:${lMainview_Username}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.888" level="INFO">${Mainview_username} = unmAYRXhyU</msg>
+<status status="PASS" starttime="20210525 21:51:42.848" endtime="20210525 21:51:42.888"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Mainview_firstname}</var>
+<arg>id:${lMainview_firstname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.898" level="INFO">${Mainview_firstname} = test</msg>
+<status status="PASS" starttime="20210525 21:51:42.888" endtime="20210525 21:51:42.898"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Mainview_lastname}</var>
+<arg>id:${lMainview_lastname}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.908" level="INFO">${Mainview_lastname} = tdf</msg>
+<status status="PASS" starttime="20210525 21:51:42.898" endtime="20210525 21:51:42.908"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Mainview_phone}</var>
+<arg>id:${lMainview_phone}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:42.916" level="INFO">${Mainview_phone} = 764443322</msg>
+<status status="PASS" starttime="20210525 21:51:42.908" endtime="20210525 21:51:42.916"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Mainview_username}</arg>
+<arg>${new_username}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 21:51:42.916" endtime="20210525 21:51:42.916"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Mainview_firstname}</arg>
+<arg>${new_firstname}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 21:51:42.916" endtime="20210525 21:51:42.916"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Mainview_lastname}</arg>
+<arg>${new_lastname}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 21:51:42.916" endtime="20210525 21:51:42.916"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Mainview_phone}</arg>
+<arg>${new_phone}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20210525 21:51:42.916" endtime="20210525 21:51:42.916"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:42.838" endtime="20210525 21:51:42.916"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:42.916" endtime="20210525 21:51:43.827"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:42.916" endtime="20210525 21:51:43.827"/>
+</kw>
+<doc>This is to verify the registered new user details from the main view</doc>
+<status status="PASS" starttime="20210525 21:51:37.456" endtime="20210525 21:51:43.827"/>
+</test>
+<test id="s1-s2-t4" name="Existing User Registration">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:43.827" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:43.827" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-10.log</msg>
+<status status="PASS" starttime="20210525 21:51:43.827" endtime="20210525 21:51:48.266"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:48.266" endtime="20210525 21:51:48.571"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:43.827" endtime="20210525 21:51:48.571"/>
+</kw>
+<kw name="Click on RegisterLink" library="Common">
+<doc>This keyword is used to click register link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegistorlink}</var>
+<arg>Home.register_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:48.581" level="INFO">${result} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:48.581" endtime="20210525 21:51:48.581"/>
+</kw>
+<msg timestamp="20210525 21:51:48.581" level="INFO">${lRegistorlink} = //a[text()='Register']</msg>
+<status status="PASS" starttime="20210525 21:51:48.579" endtime="20210525 21:51:48.581"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lRegistorlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:48.581" level="INFO">Clicking link 'xpath://a[text()='Register']'.</msg>
+<status status="PASS" starttime="20210525 21:51:48.581" endtime="20210525 21:51:48.693"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:48.579" endtime="20210525 21:51:48.693"/>
+</kw>
+<kw name="Fill values in register form" library="RegisterPage">
+<arg>${default_username}</arg>
+<arg>${default_password}</arg>
+<arg>${default_firstname}</arg>
+<arg>${default_lastname}</arg>
+<arg>${default_phone}</arg>
+<doc>This Keyword is used to fill all the fields in the registeration form</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lusername}</var>
+<arg>Registration.username_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:48.703" level="INFO">${result} = username</msg>
+<status status="PASS" starttime="20210525 21:51:48.701" endtime="20210525 21:51:48.703"/>
+</kw>
+<msg timestamp="20210525 21:51:48.703" level="INFO">${lusername} = username</msg>
+<status status="PASS" starttime="20210525 21:51:48.701" endtime="20210525 21:51:48.703"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lpassword}</var>
+<arg>Registration.password_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:48.703" level="INFO">${result} = password</msg>
+<status status="PASS" starttime="20210525 21:51:48.703" endtime="20210525 21:51:48.703"/>
+</kw>
+<msg timestamp="20210525 21:51:48.703" level="INFO">${lpassword} = password</msg>
+<status status="PASS" starttime="20210525 21:51:48.703" endtime="20210525 21:51:48.703"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lfirstname}</var>
+<arg>Registration.firstname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:48.703" level="INFO">${result} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:48.703" endtime="20210525 21:51:48.703"/>
+</kw>
+<msg timestamp="20210525 21:51:48.703" level="INFO">${lfirstname} = firstname</msg>
+<status status="PASS" starttime="20210525 21:51:48.703" endtime="20210525 21:51:48.703"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${llastname}</var>
+<arg>Registration.lastname_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:48.711" level="INFO">${result} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:48.711" endtime="20210525 21:51:48.711"/>
+</kw>
+<msg timestamp="20210525 21:51:48.711" level="INFO">${llastname} = lastname</msg>
+<status status="PASS" starttime="20210525 21:51:48.703" endtime="20210525 21:51:48.711"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lphone}</var>
+<arg>Registration.phone_textbox_id</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:48.713" level="INFO">${result} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:48.713" endtime="20210525 21:51:48.713"/>
+</kw>
+<msg timestamp="20210525 21:51:48.713" level="INFO">${lphone} = phone</msg>
+<status status="PASS" starttime="20210525 21:51:48.713" endtime="20210525 21:51:48.713"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lusername}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:48.713" level="INFO">Typing text 'firstuser9' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:48.713" endtime="20210525 21:51:48.814"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lpassword}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:48.814" level="INFO">Typing text 'password' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:48.814" endtime="20210525 21:51:48.865"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lfirstname}</arg>
+<arg>${Firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:48.865" level="INFO">Typing text 'first' into text field 'id:firstname'.</msg>
+<status status="PASS" starttime="20210525 21:51:48.865" endtime="20210525 21:51:48.903"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${llastname}</arg>
+<arg>${Familyname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:48.903" level="INFO">Typing text 'user' into text field 'id:lastname'.</msg>
+<status status="PASS" starttime="20210525 21:51:48.903" endtime="20210525 21:51:48.954"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:${lphone}</arg>
+<arg>${Phone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:48.954" level="INFO">Typing text '876543219' into text field 'id:phone'.</msg>
+<status status="PASS" starttime="20210525 21:51:48.954" endtime="20210525 21:51:49.004"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:48.693" endtime="20210525 21:51:49.004"/>
+</kw>
+<kw name="Click on RegisterButton" library="Common">
+<doc>This keyword is used to click register button in register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lRegisterbutton}</var>
+<arg>Registration.register_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:49.016" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:49.016" endtime="20210525 21:51:49.016"/>
+</kw>
+<msg timestamp="20210525 21:51:49.016" level="INFO">${lRegisterbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:49.016" endtime="20210525 21:51:49.016"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lRegisterbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:49.016" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:49.016" endtime="20210525 21:51:49.107"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:49.014" endtime="20210525 21:51:49.107"/>
+</kw>
+<kw name="Register Page Should be Open" library="RegisterPage">
+<doc>This Keyword is used to check the register page is open</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Register - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210525 21:51:49.127" level="INFO">Page title is 'Register - Demo App'.</msg>
+<status status="PASS" starttime="20210525 21:51:49.117" endtime="20210525 21:51:49.127"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:49.117" endtime="20210525 21:51:49.127"/>
+</kw>
+<kw name="Display error message in Register Page" library="RegisterPage">
+<doc>This Keyword is used to check the error message in Register page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lregerrortext}</var>
+<arg>Registration.errormessage_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:49.127" level="INFO">${result} = /html/body/section/div</msg>
+<status status="PASS" starttime="20210525 21:51:49.127" endtime="20210525 21:51:49.127"/>
+</kw>
+<msg timestamp="20210525 21:51:49.127" level="INFO">${lregerrortext} = /html/body/section/div</msg>
+<status status="PASS" starttime="20210525 21:51:49.127" endtime="20210525 21:51:49.127"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${message}</var>
+<arg>xpath: ${lregerrortext}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:49.168" level="INFO">${message} = User firstuser9 is already registered.</msg>
+<status status="PASS" starttime="20210525 21:51:49.127" endtime="20210525 21:51:49.168"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${message}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210525 21:51:49.168" level="INFO">User firstuser9 is already registered.</msg>
+<status status="PASS" starttime="20210525 21:51:49.168" endtime="20210525 21:51:49.168"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:49.127" endtime="20210525 21:51:49.168"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:49.176" endtime="20210525 21:51:50.333"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:49.168" endtime="20210525 21:51:50.333"/>
+</kw>
+<doc>This testcase will try to register existing user/already registered user</doc>
+<status status="PASS" starttime="20210525 21:51:43.827" endtime="20210525 21:51:50.333"/>
+</test>
+<test id="s1-s2-t5" name="Review Unregistered user details">
+<kw name="Start Browser and Maximize" library="Common" type="SETUP">
+<doc>This keyword is used to open browser and maximize it.</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210525 21:51:50.349" level="INFO">Opening browser 'ff' to base url 'http://127.0.0.1:8080/'.</msg>
+<msg timestamp="20210525 21:51:50.349" level="INFO">Firefox driver log is always forced to to: C:\Users\nitin\PycharmProjects\TaskDemo\--results\geckodriver-11.log</msg>
+<status status="PASS" starttime="20210525 21:51:50.333" endtime="20210525 21:51:54.856"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210525 21:51:54.856" endtime="20210525 21:51:55.142"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:50.333" endtime="20210525 21:51:55.142"/>
+</kw>
+<kw name="Click on LoginLink" library="Common">
+<doc>This keyword is used to click login link in home page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lLoginlink}</var>
+<arg>Home.login_link_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:55.142" level="INFO">${result} = //a[text()='Log In']</msg>
+<status status="PASS" starttime="20210525 21:51:55.142" endtime="20210525 21:51:55.142"/>
+</kw>
+<msg timestamp="20210525 21:51:55.142" level="INFO">${lLoginlink} = //a[text()='Log In']</msg>
+<status status="PASS" starttime="20210525 21:51:55.142" endtime="20210525 21:51:55.142"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:${lLoginlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:55.150" level="INFO">Clicking link 'xpath://a[text()='Log In']'.</msg>
+<status status="PASS" starttime="20210525 21:51:55.142" endtime="20210525 21:51:55.263"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:55.142" endtime="20210525 21:51:55.263"/>
+</kw>
+<kw name="Login Page Should be Open" library="LoginPage">
+<doc>This keyword is check if login page is open</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Log In - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210525 21:51:55.274" level="INFO">Page title is 'Log In - Demo App'.</msg>
+<status status="PASS" starttime="20210525 21:51:55.274" endtime="20210525 21:51:55.274"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:55.274" endtime="20210525 21:51:55.274"/>
+</kw>
+<kw name="Fill values in login page" library="LoginPage">
+<arg>${unregistered_username}</arg>
+<arg>${unregistered_password}</arg>
+<doc>This keyword is used to fill all the field values in login page</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:55.282" level="INFO">Typing text 'unregistered' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20210525 21:51:55.282" endtime="20210525 21:51:55.352"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:55.354" level="INFO">Typing text 'unregpassword' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210525 21:51:55.352" endtime="20210525 21:51:55.395"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:55.282" endtime="20210525 21:51:55.395"/>
+</kw>
+<kw name="Click on LoginButton" library="Common">
+<doc>This keyword is used to click register link in login page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lLoginbutton}</var>
+<arg>Login.login_button_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:55.395" level="INFO">${result} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:55.395" endtime="20210525 21:51:55.395"/>
+</kw>
+<msg timestamp="20210525 21:51:55.395" level="INFO">${lLoginbutton} = //input[@type='submit']</msg>
+<status status="PASS" starttime="20210525 21:51:55.395" endtime="20210525 21:51:55.395"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:${lLoginbutton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:55.405" level="INFO">Clicking button 'xpath://input[@type='submit']'.</msg>
+<status status="PASS" starttime="20210525 21:51:55.395" endtime="20210525 21:51:55.496"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:55.395" endtime="20210525 21:51:55.496"/>
+</kw>
+<kw name="Login Failure Page Should be Open" library="LoginPage">
+<doc>This keyword is check if login error page is open</doc>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login Failure - Demo App</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210525 21:51:55.506" level="INFO">Page title is 'Login Failure - Demo App'.</msg>
+<status status="PASS" starttime="20210525 21:51:55.506" endtime="20210525 21:51:55.506"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:55.506" endtime="20210525 21:51:55.506"/>
+</kw>
+<kw name="Display error message in Login Page" library="LoginPage">
+<doc>This keyword is used fetch error message from login page</doc>
+<kw name="Read Element Locator" library="Common">
+<var>${lerrorheader}</var>
+<arg>Login.errormessageheader_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:55.516" level="INFO">${result} = /html/body/section/header/h1</msg>
+<status status="PASS" starttime="20210525 21:51:55.514" endtime="20210525 21:51:55.516"/>
+</kw>
+<msg timestamp="20210525 21:51:55.516" level="INFO">${lerrorheader} = /html/body/section/header/h1</msg>
+<status status="PASS" starttime="20210525 21:51:55.514" endtime="20210525 21:51:55.516"/>
+</kw>
+<kw name="Read Element Locator" library="Common">
+<var>${lerrortext}</var>
+<arg>Login.errormessagetext_xpath</arg>
+<doc>This keyword is used to fetch the locator from jsonfile</doc>
+<kw name="Read Locator From Json" library="Locator">
+<var>${result}</var>
+<arg>${JsonPath}</arg>
+<msg timestamp="20210525 21:51:55.516" level="INFO">${result} = /html/body/section/p[1]</msg>
+<status status="PASS" starttime="20210525 21:51:55.516" endtime="20210525 21:51:55.516"/>
+</kw>
+<msg timestamp="20210525 21:51:55.516" level="INFO">${lerrortext} = /html/body/section/p[1]</msg>
+<status status="PASS" starttime="20210525 21:51:55.516" endtime="20210525 21:51:55.516"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${message1}</var>
+<arg>xpath:${lerrorheader}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:55.546" level="INFO">${message1} = Login Failure</msg>
+<status status="PASS" starttime="20210525 21:51:55.516" endtime="20210525 21:51:55.546"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${message2}</var>
+<arg>xpath:${lerrortext}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210525 21:51:55.556" level="INFO">${message2} = You provided incorrect login details</msg>
+<status status="PASS" starttime="20210525 21:51:55.546" endtime="20210525 21:51:55.556"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${message1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210525 21:51:55.564" level="INFO">Login Failure</msg>
+<status status="PASS" starttime="20210525 21:51:55.564" endtime="20210525 21:51:55.564"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${message1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210525 21:51:55.564" level="INFO">Login Failure</msg>
+<status status="PASS" starttime="20210525 21:51:55.564" endtime="20210525 21:51:55.564"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:55.514" endtime="20210525 21:51:55.566"/>
+</kw>
+<kw name="Close Browser Window" library="Common" type="TEARDOWN">
+<doc>This keyword is used to close the browser</doc>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210525 21:51:55.566" endtime="20210525 21:51:56.702"/>
+</kw>
+<status status="PASS" starttime="20210525 21:51:55.566" endtime="20210525 21:51:56.702"/>
+</kw>
+<doc>This is to verify the unregistered new user details</doc>
+<status status="PASS" starttime="20210525 21:51:50.333" endtime="20210525 21:51:56.702"/>
+</test>
+<status status="PASS" starttime="20210525 21:51:24.594" endtime="20210525 21:51:56.702"/>
+</suite>
+<status status="PASS" starttime="20210525 21:50:47.630" endtime="20210525 21:51:56.718"/>
+</suite>
+<statistics>
+<total>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="11" fail="0" skip="0" id="s1" name="UITestCases">UITestCases</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="RegisterNewUser">UITestCases.RegisterNewUser</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s2" name="RegisterVerifyNewUser">UITestCases.RegisterVerifyNewUser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
